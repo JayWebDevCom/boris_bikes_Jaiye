@@ -10,11 +10,8 @@ class DockingStation
   end
 
   def dock(bike)
-   fail "Dock full" if full?
-
-    bikes << bike if bike.working
-    broken_bikes << bike if !bike.working
-
+    fail "Dock full" if full?
+    bike.working ? bikes << bike : broken_bikes << bike
   end
 
   def initialize(capacity = DEFAULT_CAPACITY)
