@@ -22,7 +22,7 @@ describe DockingStation do
 
   it "dock will accept more than one bike" do
     subject.dock(Bike.new)
-    expect{subject.dock(Bike.new)}.to_not raise_error "Bike already docked"
+    expect{subject.dock(Bike.new)}.to_not raise_error
   end
 
   it "check docking station can have bikes" do
