@@ -44,7 +44,6 @@ describe DockingStation do
   end
 
   it "cannot dock a bike if #bikes is at #bikes" do
-
     newcap = DockingStation::DEFAULT_CAPACITY/2
     newcap.times {subject.dock Bike.new}
     newcap.times {subject.dock Bike.new(false)}
